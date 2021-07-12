@@ -14,6 +14,9 @@ namespace ChunabAPI.Models
         public string Description { get; set; }
         [Required]
         public string Address { get; set; }
+        public string Photo { get; set; }
+        public string Vote { get; set; }
+
 
     }
 }
