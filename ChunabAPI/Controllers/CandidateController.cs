@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ChunabAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class CandidatesController : ControllerBase
+    public class CandidateController : ControllerBase
     {
         [HttpGet]
         public ActionResult<IEnumerable<Candidate>> GetCandidates()

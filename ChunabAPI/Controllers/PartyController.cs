@@ -7,7 +7,7 @@ using System.Linq;
 namespace ChunabAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class PartiesController : ControllerBase
+    public class PartyController : ControllerBase
     {
 
         [HttpGet]

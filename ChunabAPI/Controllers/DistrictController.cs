@@ -10,7 +10,7 @@ namespace ChunabAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DistrictsController : ControllerBase
+    public class DistrictController : ControllerBase
     {
         [HttpGet]
         public ActionResult<IEnumerable<District>> GetDistricts()
