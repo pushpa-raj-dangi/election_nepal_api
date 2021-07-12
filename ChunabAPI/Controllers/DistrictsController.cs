@@ -37,13 +37,13 @@ namespace ChunabAPI.Controllers
             return Ok(delteDistrict);
         }
 
-        [HttpDelete("{id}")]
-        public ActionResult<District> DeleteDistrict(Guid id, District districtFromBody)
+        [HttpPut("{id}")]
+        public ActionResult<District> EditDistrict(Guid id, District districtFromBody)
         {
             var districts = new List<District>() { new District { Id = id, Name = "Rolpa", Description = "Rolpa is ", Photo = "photos0", Voters = "234242342" }, new District { Id = id, Name = "Rolpa", Description = "Rolpa is ", Photo = "photos0", Voters = "234242342" }, new District { Id = id, Name = "Rolpa", Description = "Rolpa is ", Photo = "photos0", Voters = "234242342" } };
             var district = districts.Find(x => x.Id == id);
 
-                district.Name  = districtFromBody.Name,
+            district.Name = districtFromBody.Name;
                 district.Photo = districtFromBody.Photo;
                 district.Voters = districtFromBody.Voters;
                 district.Description = districtFromBody.Description;
