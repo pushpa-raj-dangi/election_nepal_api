@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace ChunabAPI.Models
 {
-    public class Province
+    public class ElectionRegion
     {
         public Guid Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public string Description { get; set; }
-        public string Voters { get; set; }
-        public string Photo { get; set; }
+
     }
 }
