@@ -35,10 +35,11 @@ namespace ChunabAPI.Controllers
         [HttpDelete("{id}")]
         public ActionResult<Party> DeleteParty(Guid id)
         {
-            var parties = new List<Party>() { new Party { Id = id, Name = "एमाले", Logo = "एमाले", Vote = "345345", Description = "नेपाल कम्युनिष्ट पार्टी (एकीकृत माक्र्सवादी–लेनिनवादी)को. विधान २०४९. (​नवौं राष्ट्रिय महाधिवेशन, २०७१ को संशोधन सहित)" }, new Party { Id = id, Name = "एमाले", Logo = "एमाले", Vote = "345345", Description = "नेपाल कम्युनिष्ट पार्टी (एकीकृत माक्र्सवादी–लेनिनवादी)को. विधान २०४९. (​नवौं राष्ट्रिय महाधिवेशन, २०७१ को संशोधन सहित)" }, new Party { Id = id, Name = "एमाले", Logo = "एमाले", Vote = "345345", Description = "नेपाल कम्युनिष्ट पार्टी (एकीकृत माक्र्सवादी–लेनिनवादी)को. विधान २०४९. (​नवौं राष्ट्रिय महाधिवेशन, २०७१ को संशोधन सहित)" } };
-            var party = parties.Where(x => x.Id == id).FirstOrDefault();
-            var remmovedParty = parties.Remove(party);
-            return Ok(remmovedParty);
+           if(id==null){
+               return BadRequest();
+           }
+            repository.DeleteParty(id);
+            return Ok("Delete party successfully !!");
 
         }
              [HttpPost]
@@ -53,10 +54,11 @@ namespace ChunabAPI.Controllers
 
                 };
 
-                if(ModelState.IsValid){
-                    repository.CreateParty(party);
+                if(!ModelState.IsValid){
+                throw new Exception("Invalid input");
                 }
 
+                repository.CreateParty(party);
                 return Ok(party);
 
             }
@@ -64,18 +66,11 @@ namespace ChunabAPI.Controllers
         [HttpPut("{id}")]
         public ActionResult<Party> EditParty(Guid id, Party partyBody)
         {
-            var parties = new List<Party>() { new Party { Id = id, Name = "एमाले", Logo = "एमाले", Vote = "345345", Description = "नेपाल कम्युनिष्ट पार्टी (एकीकृत माक्र्सवादी–लेनिनवादी)को. विधान २०४९. (​नवौं राष्ट्रिय महाधिवेशन, २०७१ को संशोधन सहित)" }, new Party { Id = id, Name = "एमाले", Logo = "एमाले", Vote = "345345", Description = "नेपाल कम्युनिष्ट पार्टी (एकीकृत माक्र्सवादी–लेनिनवादी)को. विधान २०४९. (​नवौं राष्ट्रिय महाधिवेशन, २०७१ को संशोधन सहित)" }, new Party { Id = id, Name = "एमाले", Logo = "एमाले", Vote = "345345", Description = "नेपाल कम्युनिष्ट पार्टी (एकीकृत माक्र्सवादी–लेनिनवादी)को. विधान २०४९. (​नवौं राष्ट्रिय महाधिवेशन, २०७१ को संशोधन सहित)" } };
-            var party = parties.Where(x => x.Id == id).FirstOrDefault();
-            party.Name = partyBody.Name;
-            party.Description = partyBody.Description;
-            party.Logo = partyBody.Logo;
-
-            return Ok(new Party
-            {
-                Name = partyBody.Name,
-                Description = partyBody.Description,
-                Logo = partyBody.Logo
-            });
+            if(id == null){
+                return BadRequest();
+            }
+            repository.EditParty(partyBody,id);
+            return Ok(partyBody);
 
         }
 
