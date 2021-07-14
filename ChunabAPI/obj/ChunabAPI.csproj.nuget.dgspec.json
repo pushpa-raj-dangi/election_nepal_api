@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj": {}
+    "F:\\old\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj": {}
   },
   "projects": {
-    "F:\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj": {
+    "F:\\old\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj",
+        "projectUniqueName": "F:\\old\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj",
         "projectName": "ChunabAPI",
-        "projectPath": "F:\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj",
+        "projectPath": "F:\\old\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj",
         "packagesPath": "C:\\Users\\Appharu\\.nuget\\packages\\",
-        "outputPath": "F:\\dotnet\\ChunabAPI\\ChunabAPI\\obj\\",
+        "outputPath": "F:\\old\\dotnet\\ChunabAPI\\ChunabAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Appharu\\AppData\\Roaming\\NuGet\\NuGet.Config",

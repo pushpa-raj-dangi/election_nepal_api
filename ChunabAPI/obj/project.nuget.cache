@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ChQl6YBCfMctH2jj0+iW/VCjC3ZHRQazX7b8NWhIi5L2gIjDH4Yf+A0yL06y+OwMr7078BwxzZztgeOU/UrpEQ==",
+  "dgSpecHash": "b0lHz5WOHBVOJdXoO+kkVn6kCyli6XOcEusYFkTaqRTk8mVRRUuVLv0tbtV3QX0usH3QYFUEAMqpp8tjhHNn5A==",
   "success": true,
-  "projectFilePath": "F:\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj",
+  "projectFilePath": "F:\\old\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Appharu\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.7\\microsoft.entityframeworkcore.5.0.7.nupkg.sha512",
     "C:\\Users\\Appharu\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.7\\microsoft.entityframeworkcore.abstractions.5.0.7.nupkg.sha512",
