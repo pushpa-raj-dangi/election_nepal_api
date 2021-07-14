@@ -1,16 +1,13 @@
 ﻿using ChunabAPI.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ChunabAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DistrictController : ControllerBase
+    public class  DistrictsController : ControllerBase
     {
         [HttpGet]
         public ActionResult<IEnumerable<District>> GetDistricts()

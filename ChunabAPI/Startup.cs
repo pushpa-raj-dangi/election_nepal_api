@@ -1,5 +1,8 @@
+using ChunabAPI.Data;
+using ChunabAPI.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -21,6 +24,8 @@ namespace ChunabAPI
         {
 
             services.AddControllers();
+            services.AddDbContext<ApplicationDbContext>(options=>options.UseSqlite("Data Source=Database.db"));
+            services.AddScoped<IPartyRepository,PartyRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ChunabAPI", Version = "v1" });
