@@ -9,8 +9,26 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'client';
 
-  constructor(private http: HttpClient) {
-    http.get("https://localhost:5001/api/parties/").subscribe(d => console.log(d));
+  data: any;
+
+  constructor() {
+    this.data = {
+      labels: ['एमाले ', 'मावोबादी', 'C'],
+      datasets: [
+        {
+          data: [300, 50, 100],
+          backgroundColor: [
+            "#FF6384",
+            "#36A2EB",
+            "#FFCE56"
+          ],
+          hoverBackgroundColor: [
+            "#FF6384",
+            "#36A2EB",
+            "#FFCE56"
+          ]
+        }]
+    };
 
   }
 }

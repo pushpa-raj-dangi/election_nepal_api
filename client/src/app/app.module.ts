@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ChartModule } from 'primeng/chart';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +19,8 @@ import { CardModule } from 'primeng/card';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CardModule
+    CardModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

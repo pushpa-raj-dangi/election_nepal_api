@@ -1,4 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/themes/saga-blue/theme.css";
+@import "~primeng/resources/primeng.min.css";
+@import "~primeflex/primeflex.css";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// @import "~primeflex/src/_grid.scss";
+// @import "~primeflex/src/_formlayout.scss";
+// @import "~primeflex/src/_display.scss";
+// @import "~primeflex/src/_text.scss";
+// @import "~primeflex/src/_display.scss";
+// @import "~primeflex/src/flexbox/_flexbox.scss";
+// @import "~primeflex/src/_spacing.scss";
+// @import "~/primeflex/src/_elevation.scss";
+
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
