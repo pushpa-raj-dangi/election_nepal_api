@@ -24,15 +24,33 @@ namespace ChunabAPI.Repository
 
         public void DeleteParty(Guid id)
         {
-            var party = context.Parties.SingleOrDefault(party=>party.Id == id);
+            var party = context.Parties.SingleOrDefault(party => party.Id == id);
             context.Parties.Remove(party);
+            context.SaveChanges();
         }
 
         public void EditParty(Party party, Guid id)
         {
-           var partyInDb = context.Parties.FindAsync(id);
-          context.Update(party);
-          context.SaveChangesAsync();
+            try
+            {
+                var partyInDb = context.Parties.Find(id);
+                partyInDb.Id = id;
+                partyInDb.Name = party.Name;
+                partyInDb.Description = party.Description;
+                partyInDb.Logo = party.Logo;
+                partyInDb.Vote = party.Vote;
+
+                if (partyInDb is null)
+                {
+                    throw new Exception("Not found");
+                }
+
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                System.Console.WriteLine(ex.Message);
+            }
         }
 
         public async Task<IEnumerable<Party>> GetParties()
@@ -42,7 +60,7 @@ namespace ChunabAPI.Repository
 
         public async Task<Party> GetParty(Guid id)
         {
-          return await context.Parties.FindAsync(id);
+            return await context.Parties.FindAsync(id);
         }
     }
 }

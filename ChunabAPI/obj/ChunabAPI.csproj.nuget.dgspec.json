@@ -1,32 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "F:\\old\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj": {}
+    "D:\\dotnetnew\\election_nepal_api\\ChunabAPI\\ChunabAPI.csproj": {}
   },
   "projects": {
-    "F:\\old\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj": {
+    "D:\\dotnetnew\\election_nepal_api\\ChunabAPI\\ChunabAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\old\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj",
+        "projectUniqueName": "D:\\dotnetnew\\election_nepal_api\\ChunabAPI\\ChunabAPI.csproj",
         "projectName": "ChunabAPI",
-        "projectPath": "F:\\old\\dotnet\\ChunabAPI\\ChunabAPI\\ChunabAPI.csproj",
-        "packagesPath": "C:\\Users\\Appharu\\.nuget\\packages\\",
-        "outputPath": "F:\\old\\dotnet\\ChunabAPI\\ChunabAPI\\obj\\",
+        "projectPath": "D:\\dotnetnew\\election_nepal_api\\ChunabAPI\\ChunabAPI.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "D:\\dotnetnew\\election_nepal_api\\ChunabAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Appharu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -37,9 +41,13 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNet.WebApi.Cors": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.8, )"
@@ -77,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.5.21302.13\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
